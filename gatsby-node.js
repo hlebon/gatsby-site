@@ -1,5 +1,47 @@
 const path = require('path')
 
+const createTagPage = (createPage, posts) => {
+    const tagPageTemplate = path.resolve(`src/templates/tags.js`)
+    const allTagsTemplate = path.resolve(`src/templates/all-tags.js`)
+
+    const postsByTags = {}
+
+    posts.forEach(({node}) => {
+        if(node.frontmatter.tags{
+            node.frontmatter.tags.forEach(tag => {
+                if(!postByTags[tag]){
+                    postsByTags[tag] = []
+                }
+    
+                postByTags[tag].push(node)
+            })
+        }
+    })
+
+    const tags = Object.Keys(postsByTags)
+    createPage({
+        path: `/tags`,
+        component: allTagsTemplate,
+        context: {
+            tags: tags.sort()
+        }
+    })
+
+    tags.forEach(tagsName => {
+        const posts = postsByTags[tagName]
+
+        createPage({
+            path: `/tags/${tagName}`,
+            component: tagPageTemplate,
+            context: {
+                posts,
+                tagName
+            }
+        })
+    })
+}
+
+
 exports.createPages = ({
     boundActionCreators, graphql
 }) => {
@@ -30,16 +72,17 @@ exports.createPages = ({
 
         const posts = result.data.allMarkdownRemark.edges
 
+        createTagPages(createPage, posts)
+
         posts.forEach(({node}, index) => {
             createPage({
                 path: node.frontmatter.path,
                 component: blogPostTemplate,
                 context: {
-                    prev: index === 0 ? null : posts[index -1].node,
+                    prev: index === 0 ? false : posts[index -1].node,
                     next: index === (posts.length -1) ? null : posts[index + 1].node
                 }
             })
-            
-        });
+        })
     })
 }
