@@ -1,13 +1,13 @@
 const path = require('path')
 
-const createTagPage = (createPage, posts) => {
+const createTagPages = (createPage, posts) => {
     const tagPageTemplate = path.resolve(`src/templates/tags.js`)
     const allTagsTemplate = path.resolve(`src/templates/all-tags.js`)
 
     const postsByTags = {}
 
     posts.forEach(({node}) => {
-        if(node.frontmatter.tags{
+        if(node.frontmatter.tags){
             node.frontmatter.tags.forEach(tag => {
                 if(!postByTags[tag]){
                     postsByTags[tag] = []
