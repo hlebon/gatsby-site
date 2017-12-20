@@ -10,10 +10,10 @@ const IndexPage = ({data}) => {
     <p>Hello world!</p>
     <p>This is my first gatsby page</p>
     <ul>
-      {posts.map(({node: post}) => {
+      {posts.map(({node: post}, index) => {
         const { frontmatter } = post
         return (
-          <div>
+          <div key={index}>
             <h3>
               <Link to={frontmatter.path}>{frontmatter.title}</Link>
             </h3>
@@ -36,7 +36,7 @@ export const query = graphql`
           id
           frontmatter{
             title
-            date
+            date(formatString: "MMMM DD, YYYY")
             path
             tags
             excerpt

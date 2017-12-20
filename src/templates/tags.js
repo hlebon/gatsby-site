@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const AllTags = ({ pathContext }) => {
+const Tags = ({ pathContext }) => {
     const { posts, tagName } = pathContext
     if(posts){
         return (
@@ -10,9 +10,9 @@ const AllTags = ({ pathContext }) => {
                     Post about {tagName}
                 </span>
                 <ul>
-                    {posts.map(post => {
+                    {posts.map((post, index) => {
                         return (
-                            <li>
+                            <li key={index}>
                                 <Link to={post.frontmatter.path}>
                                     {post.frontmatter.title}
                                 </Link>
@@ -25,4 +25,4 @@ const AllTags = ({ pathContext }) => {
     }
 }
 
-return default AllTags
+export default Tags

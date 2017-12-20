@@ -17,10 +17,18 @@ const Template = ({data, location, pathContext}) => {
                 <h3>{date}</h3>
                 <div dangerouslySetInnerHTML={{__html: html}}></div>
                 <p>
-                    {prev && ( <Link to={prev.frontmatter.path}>Previous: { prev.frontmatter.title }</Link> )}
+                    { prev && 
+                        ( <Link to={prev.frontmatter.path}>
+                            Previous: { prev.frontmatter.title }
+                        </Link> )
+                    }
                 </p>
                 <p>
-                    {next && ( <Link to={next.frontmatter.path}>Previous: { next.frontmatter.title }</Link> )}
+                    {next && 
+                        ( <Link to={next.frontmatter.path}>
+                        Next: { next.frontmatter.title }
+                        </Link> )
+                    }
                 </p>
             </div>
         </div>
@@ -33,7 +41,7 @@ export const pageQuery = graphql`
             html
             frontmatter{
                 title
-                date
+                date(formatString: "MMMM DD, YYYY")
                 path
                 tags
                 excerpt
