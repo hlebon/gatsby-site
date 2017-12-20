@@ -1,0 +1,74 @@
+{
+  "assetsByChunkName": {
+    "path---tags-blog": [
+      "path---tags-blog-951dbcfd66bfc141502f.js",
+      "path---tags-blog-951dbcfd66bfc141502f.js.map"
+    ],
+    "component---src-pages-nav-js": [
+      "component---src-pages-nav-js-35edc6e4f5b7f377de1c.js",
+      "component---src-pages-nav-js-35edc6e4f5b7f377de1c.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-041e887fa970f1e39bd9.js",
+      "component---src-pages-index-js-041e887fa970f1e39bd9.js.map"
+    ],
+    "component---src-templates-tags-js": [
+      "component---src-templates-tags-js-7d3263e41d09a820d98b.js",
+      "component---src-templates-tags-js-7d3263e41d09a820d98b.js.map"
+    ],
+    "path---tags": [
+      "path---tags-a086c98c0abffa5f9e34.js",
+      "path---tags-a086c98c0abffa5f9e34.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "path---tags-cool": [
+      "path---tags-cool-858172852c1bccf80b58.js",
+      "path---tags-cool-858172852c1bccf80b58.js.map"
+    ],
+    "component---src-templates-blog-post-js": [
+      "component---src-templates-blog-post-js-078f487e04b6af28ecf9.js",
+      "component---src-templates-blog-post-js-078f487e04b6af28ecf9.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-8626e00b6c8f89af8aad.js",
+      "component---src-layouts-index-js-8626e00b6c8f89af8aad.js.map"
+    ],
+    "path---nav": [
+      "path---nav-a0e39f21c11f6a62c5ab.js",
+      "path---nav-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---index": [
+      "path---index-db77aaae3d6a28e2b4e6.js",
+      "path---index-db77aaae3d6a28e2b4e6.js.map"
+    ],
+    "commons": [
+      "commons-19853bf926773675ddb7.js",
+      "commons-19853bf926773675ddb7.js.map"
+    ],
+    "path---pre-mother-day": [
+      "path---pre-mother-day-cc9cb31dfdb45032b3bd.js",
+      "path---pre-mother-day-cc9cb31dfdb45032b3bd.js.map"
+    ],
+    "path---tags-navidad": [
+      "path---tags-navidad-edbfc73d2c588ba37bf8.js",
+      "path---tags-navidad-edbfc73d2c588ba37bf8.js.map"
+    ],
+    "component---src-templates-all-tags-js": [
+      "component---src-templates-all-tags-js-8a3328879baa83235732.js",
+      "component---src-templates-all-tags-js-8a3328879baa83235732.js.map"
+    ],
+    "path---common-day": [
+      "path---common-day-f9e155cad0905be5a396.js",
+      "path---common-day-f9e155cad0905be5a396.js.map"
+    ],
+    "app": [
+      "app-b86966d7aa4a63db3f1d.js",
+      "build-js-styles.css",
+      "app-b86966d7aa4a63db3f1d.js.map",
+      "build-js-styles.css.map"
+    ]
+  }
+}
