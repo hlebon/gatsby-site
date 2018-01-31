@@ -59,7 +59,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                         path
                         title
                         excerpt
-                        tags
+                        tags,
+                        author
                     }
                 }
             }

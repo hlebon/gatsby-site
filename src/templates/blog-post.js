@@ -13,23 +13,29 @@ const Template = ({data, location, pathContext}) => {
         <div>
             <Helmet title={`${title} - My blog`}/>
             <div>
-                <h1>{title}</h1>
-                <h3>{date}</h3>
-                <div dangerouslySetInnerHTML={{__html: html}}></div>
-                <p>
-                    { prev && 
-                        ( <Link to={prev.frontmatter.path}>
-                            Previous: { prev.frontmatter.title }
-                        </Link> )
-                    }
-                </p>
-                <p>
-                    {next && 
-                        ( <Link to={next.frontmatter.path}>
-                        Next: { next.frontmatter.title }
-                        </Link> )
-                    }
-                </p>
+                <header>
+                    <h1>{title}</h1>
+                    <h4>{date}</h4>
+                </header>
+                <section>
+                    <div dangerouslySetInnerHTML={{__html: html}}></div>
+                </section>
+                <footer>
+                    <p>
+                        { prev && 
+                            ( <Link to={prev.frontmatter.path}>
+                                Previous: { prev.frontmatter.title }
+                            </Link> )
+                        }
+                    </p>
+                    <p>
+                        {next && 
+                            ( <Link to={next.frontmatter.path}>
+                            Next: { next.frontmatter.title }
+                            </Link> )
+                        }
+                    </p>
+                </footer>
             </div>
         </div>
     )
