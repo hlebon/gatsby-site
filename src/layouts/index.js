@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import './index.css'
+import './app.css'
 
 const Header = () => (
   <div
@@ -15,7 +16,7 @@ const Header = () => (
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 960,
+        maxWidth: 860,
         padding: '1.45rem 1.0875rem',
       }}
     >
@@ -44,14 +45,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <div className="container">
       {children()}
     </div>
   </div>

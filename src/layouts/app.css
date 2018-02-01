@@ -1,0 +1,118 @@
+.container{
+    margin: 0 auto;
+    max-width: 95%;
+    padding: 0px 1.0875rem 1.45rem;
+    padding-top: 0;
+}
+
+.header{
+    text-align: center;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-title {
+    color: #4A4A4A;
+    font-size: 2.0em
+}
+
+.header-subtitle {
+    font-size: 1.1em;
+    color: gray;
+}
+
+.article {
+    margin: 4rem auto;
+    padding: 0 .5rem;
+}
+
+
+
+.post-title{
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.post-title > a {
+    text-decoration: none !important;
+    color: #4A4A4A;
+}
+
+.post-title:hover > a{
+    color: black;
+}
+
+.post-excerpt{
+    font-size: 14.5px;
+    font-size: 0.95em;
+}
+
+.post-excerpt > p {
+    line-height: 1.7em;
+}
+
+.post-meta-tag-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-meta-link {
+    margin: 0.3em 0.3em 0.3em 0;
+}
+
+.post-meta .post-meta-link > a {
+    color: #9EABB3;
+}
+
+
+.post-meta-link > a {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 650px){
+    .container{
+        max-width: 80%;
+    }
+
+    .header{
+        height: 30vh;
+    }
+
+    .header-title {
+        font-size: 2.5em
+    }
+    
+    .header-subtitle {
+        font-size: 1.5em;
+    }
+
+    .post-title{
+        font-size: 1.7rem;
+    }
+
+    .post-excerpt{
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 1150px){
+    .header-title {
+        font-size: 2.7em
+    }
+
+    .post-title{
+        font-size: 2rem;
+    }
+
+    .post-excerpt{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 950px){
+    .container{
+        max-width: 850px;
+    }
+}
