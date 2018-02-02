@@ -73,9 +73,13 @@
     color: #9EABB3;
 }
 
-
 .post-meta-link > a {
     text-decoration: none;
+}
+
+pre{
+    background: #272822;
+    color: #f8f8f2;
 }
 
 @media screen and (min-width: 650px){

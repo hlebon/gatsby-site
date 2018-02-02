@@ -9,3 +9,11 @@ author: "Hans Garcia"
 
 #a common day , today
 I dont know what to write... 
+
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```

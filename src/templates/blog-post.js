@@ -3,6 +3,19 @@ import Link from 'gatsby-link'
 import { graphql } from 'graphql';
 import Helmet from 'react-helmet'
 
+const styles = {
+    title: {
+        marginBottom: 0
+    },
+    date : {
+        color: "#4A4A4A",
+    },
+    body: {
+        marginTop: "55px"
+    }
+}
+
+
 const Template = ({data, location, pathContext}) => {
     const { markdownRemark: post } = data
     const { frontmatter, html } = post
@@ -14,10 +27,10 @@ const Template = ({data, location, pathContext}) => {
             <Helmet title={`${title} - My blog`}/>
             <div>
                 <header>
-                    <h1>{title}</h1>
-                    <h4>{date}</h4>
+                    <h1 style={styles.title}>{title}</h1>
+                    <span style={styles.date}>{date}</span>
                 </header>
-                <section>
+                <section style={styles.body}>
                     <div dangerouslySetInnerHTML={{__html: html}}></div>
                 </section>
                 <footer>

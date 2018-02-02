@@ -38,10 +38,10 @@ const Header = () => (
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="The Fullstack blog"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Fullstack developer' },
+        { name: 'keywords', content: 'c#, javascript, reactjs, MVC, asp.net, entity framework' },
       ]}
     />
     <Header />
