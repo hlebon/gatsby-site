@@ -35,7 +35,7 @@ const PostList = ( { data }  ) => {
               </section>
               <footer className="post-meta">
                 <div>
-                  <span>{frontmatter.author}</span>
+                  <span>{frontmatter.author} on: </span>
                 </div>
                 <div className="post-meta-tag-group">
                     {post.frontmatter.tags.map((tag, index) => {
@@ -49,7 +49,7 @@ const PostList = ( { data }  ) => {
                     })}
                 </div>
                 <time>
-                  {frontmatter.date}
+                  | {frontmatter.date}
                 </time>
               </footer>
             </article>
