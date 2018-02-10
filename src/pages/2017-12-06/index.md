@@ -22,7 +22,7 @@ function fancyAlert(arg) {
 }
 ```
 
-Although I still don’t like fetch()’s lack of rejecting failed HTTP status codes, over time fetch()’s behavior has grown on me—mostly because it gives me more control over how I handle individual problems. Plus, the composable nature of fetch() makes it fairly trivial to manually handle errors without adding a bunch of verbose code.
+Although I still don’t like fetch()’s lack of rejecting failed HTTP status codes, [I'm an inline-style link with title](https://www.google.com "Google's Homepage") over time fetch()’s behavior has grown on me—mostly because it gives me more control over how I handle individual problems. Plus, the composable nature of fetch() makes it fairly trivial to manually handle errors without adding a bunch of verbose code.
 
 Overall I think it’s worth taking few minutes to play with fetch(), even if it’s just to see what you think. It’s certainly a far more readable alternative to XMLHttpRequest. If you happen to be building NativeScript apps, you might not know that you can use fetch() today without any need for a polyfill or fallback. And something about using fetch() to perform HTTP requests in native Android and iOS apps is just plain cool :)
 

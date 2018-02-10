@@ -14,6 +14,9 @@ const Header = () => {
 }
 
 const generateNewArray = (posts, n) => {
+  if(n == 0){
+    return [posts]
+  }
   let start = 0
   let end = n
   let lista = []
@@ -37,17 +40,30 @@ class PostList extends Component{
   }
 
   componentDidMount(){
-    console.log("recieve props")
-    const posts = generateNewArray(this.props.data.allMarkdownRemark.edges, 1)
+    const posts = generateNewArray(this.props.data.allMarkdownRemark.edges, 0)
     this.setState({
       posts
     })
   }
 
-  olderPosts = () =>{
-    this.setState((prevState) => ({
-      pagina: prevState.pagina + 1
-    }))
+  olderPosts = () => {
+    if(this.state.pagina + 1 < this.state.posts.length){
+      this.setState((prevState) => ({
+        pagina: prevState.pagina + 1
+      }))
+    }else{
+      alert("No hay mas posts antiguos")
+    }
+  }
+
+  newPosts = () => {
+    if(this.state.pagina - 1 >= 0){
+      this.setState((prevState) => ({
+        pagina: prevState.pagina - 1
+      }))
+    }else{
+      alert("No hay post mas recientes")
+    }
   }
 
   render(){
@@ -94,7 +110,6 @@ class PostList extends Component{
           })}
         </div>
         }
-        <input type="button" value="older" onClick={this.olderPosts}/>
       </div>
     )
   }  

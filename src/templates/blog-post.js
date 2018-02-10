@@ -61,20 +61,22 @@ class Template extends Component {
                         <div dangerouslySetInnerHTML={{__html: html}}></div>
                     </section>
                     <footer>
-                        <p>
+                        <div>
                             { prev && 
-                                ( <Link to={prev.frontmatter.path}>
-                                    Previous: { prev.frontmatter.title }
-                                </Link> )
+                                ( <p>Previous: <Link to={prev.frontmatter.path}>
+                                     { prev.frontmatter.title }
+                                </Link>
+                                </p> )
                             }
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                             {next && 
-                                ( <Link to={next.frontmatter.path}>
-                                Next: { next.frontmatter.title }
-                                </Link> )
+                                ( <p>Next: <Link to={next.frontmatter.path}>
+                                 { next.frontmatter.title }
+                                </Link> 
+                                </p> )
                             }
-                        </p>
+                        </div>
                     </footer>
                     <ReactDisqusThread
                         shortname={'hansgarcia'}
