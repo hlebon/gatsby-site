@@ -1,4 +1,12 @@
 
+.title-color{
+    color:#4c8bbd !important;
+}
+
+.title-color:hover{
+    color:#407daf !important!;
+}
+
 a{
     display: inline-block;
     position: relative;

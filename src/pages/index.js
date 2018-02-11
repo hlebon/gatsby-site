@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className="header">
       <div>
-        <h1 className="header-title">Hi, I am Hans</h1>
+        <h1 className="header-title title-color">Hi, I am Hans</h1>
         <p className="header-subtitle">This is my awesome blog page... </p>
       </div>
     </div>
@@ -80,7 +80,7 @@ class PostList extends Component{
               <article className="article" key={index}>
                 <header>
                   <h3 className="post-title">
-                    <Link to={frontmatter.path}>{frontmatter.title}</Link>
+                    <Link to={frontmatter.path} className={"title-color"}>{frontmatter.title}</Link>
                   </h3>
                 </header>
                 <section className="post-excerpt">

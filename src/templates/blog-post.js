@@ -53,7 +53,7 @@ class Template extends Component {
             <div>
                 <Helmet title={`${title} - My blog`}/>
                 <div>
-                    <header>
+                    <header className={"title-color"}>
                         <h1 style={styles.title}>{title}</h1>
                         <span style={styles.date}>{date}</span>
                     </header>
@@ -78,11 +78,14 @@ class Template extends Component {
                             }
                         </div>
                     </footer>
+                    { /*
                     <ReactDisqusThread
+                     
                         shortname={'hansgarcia'}
                         identifier={`CC${frontmatter.id}`}
                         title={title}
                     />
+                    */}
                 </div>
             </div>
         )

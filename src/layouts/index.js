@@ -28,7 +28,7 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          Hans Blog
+          HC
         </Link>
       </h3>
     </div>
@@ -51,8 +51,6 @@ const TemplateWrapper = ({ children }) => (
   </div>
 )
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
+
 
 export default TemplateWrapper
