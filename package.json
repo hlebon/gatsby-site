@@ -8,8 +8,9 @@
     "gatsby-link": "^1.6.28",
     "gatsby-plugin-google-fonts": "0.0.3",
     "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-source-filesystem": "^1.5.9",
-    "gatsby-transformer-remark": "^1.7.23",
+    "gatsby-remark-prismjs": "^1.2.15",
+    "gatsby-source-filesystem": "^1.5.19",
+    "gatsby-transformer-remark": "^1.7.32",
     "install": "^0.10.4",
     "react-disqus-thread": "^0.4.0"
   },

@@ -11,3 +11,28 @@ author: "Hans Garcia"
 
 #pre mother day, huppi
 I dont know what to write... 
+
+```javascript{1,4-6}
+// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        `gatsby-remark-prismjs`,
+      ]
+    }
+  }
+]```
+
+Otra funcion
+
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
+
+Todo a funcionado perfecto

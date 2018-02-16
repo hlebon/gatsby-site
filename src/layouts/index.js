@@ -5,11 +5,12 @@ import Helmet from 'react-helmet'
 
 import './index.css'
 import './app.css'
+require("./prims-funky.css");
 
 const Header = () => (
   <div
     style={{
-      background: 'white',
+      background: 'linear-gradient(62deg,#3c4556,#282a36)',
       marginBottom: '1.45rem',
     }}
   >
@@ -24,11 +25,11 @@ const Header = () => (
         <Link
           to="/"
           style={{
-            color: '#4A4A4A',
+            color: 'hsla(0,0%,100%,.8)',
             textDecoration: 'none',
           }}
         >
-          HC
+          Hans Blog
         </Link>
       </h3>
     </div>

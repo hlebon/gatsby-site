@@ -4,7 +4,7 @@
 }
 
 .title-color:hover{
-    color:#407daf !important!;
+    color:#407daf !important;
 }
 
 a{
@@ -121,14 +121,6 @@ p > a:hover:after {
 
 .post-meta-link {
     margin: 0 0.3em 0.3em 0;
-}
-
-.post-meta .post-meta-link > a {
-    color: #9EABB3;
-}
-
-.post-meta-link > a {
-    text-decoration: none;
 }
 
 pre{

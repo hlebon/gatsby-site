@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
-import ReactDisqusThread from 'react-disqus-thread'
 import { graphql } from 'graphql';
 import Helmet from 'react-helmet'
 
@@ -15,25 +14,6 @@ const styles = {
         marginTop: "55px"
     }
 }
-
-function guid() {
-    function s4() {
-      return Math.floor((1 + Math.random()) * 0x10000)
-        .toString(16)
-        .substring(1);
-    }
-    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-      s4() + '-' + s4() + s4() + s4();
-  }
-
-
-  /*
-{data, location, pathContext}
-  const { markdownRemark: post } = data
-    const { frontmatter, html } = post
-    const { title, date }  = frontmatter
-    const { next, prev } = pathContext
-  */
 
 class Template extends Component {
     
@@ -78,14 +58,6 @@ class Template extends Component {
                             }
                         </div>
                     </footer>
-                    { /*
-                    <ReactDisqusThread
-                     
-                        shortname={'hansgarcia'}
-                        identifier={`CC${frontmatter.id}`}
-                        title={title}
-                    />
-                    */}
                 </div>
             </div>
         )

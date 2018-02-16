@@ -12,6 +12,12 @@ module.exports = {
         name: `src`,
         path: `${__dirname}/src`
       }
+    },
+    {
+      resolve: `gatsby-remark-prismjs`,
+      options: {
+        classPrefix: "language-",
+      }
     }
   ],
 }

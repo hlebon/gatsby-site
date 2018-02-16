@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 
-class Page404 extends Comment{
+class Page404 extends Component{
     render(){
         return (
-            <h1>Error 404 page</h1>
+            <div>
+                <h1>Page not found</h1>
+            </div>
         )
     }
 }

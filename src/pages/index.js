@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
-import { graphql } from 'graphql';
+import { graphql } from 'graphql'
+import '../layouts/index.css'
+import '../layouts/app.css'
 
 const Header = () => {
   return (
@@ -93,11 +95,11 @@ class PostList extends Component{
                   <div className="post-meta-tag-group">
                       {post.frontmatter.tags.map((tag, index) => {
                         return (
-                        <div key={index} className="post-meta-link">
+                        <p key={index} className="post-meta-link">
                           <Link to={`/tags/${tag}`}>
                             {tag}
                           </Link>
-                        </div>
+                        </p>
                         )
                       })}
                   </div>
