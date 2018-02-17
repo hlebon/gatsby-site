@@ -2,29 +2,28 @@
 id: "1"
 path: "/hola-mundo"
 titleid: "Hola Mundo"
-date: "2018-02-13T19:12:33.962Z"
+date: "2018-02-17T02:12:33.962Z"
 title: "Hola Mundo"
 tags: ['blog', 'intro']
-excerpt: "Escribir un blog puede ser algo complicado pero que trae muchos beneficios, en este post explico los beneficios que espero obtener de escribir un blog.. "
+excerpt: "Escribir un blog puede ser dificil pero como toda persona me gustan los retos, en este articulo quiero presentarme a la comunidad y decir Hello World"
 author: "Hans García"
 ---
 
 ##Hola Mundo
-No ha sido nada dificil decidir empezar un blog, lo difícil ha sido empezarlo, en mi mente parece ser una buena idea, una de esas ideas que debia iniciar, pero aunque pareza dificil de creer he tardado casi dos años en concretar hasta el día de hoy.
+Después de un tiempo, después  de un buen tiempo de querer iniciar un blog por fin ha llegado ese día.
+Claro, no paso de la noche a la mañana. 
 
-##Dudas Iniciales
-No me veia como un blogger exitoso y las dudas iniciales empezaron, ¿y si nadie lo lee?, ¿que tal si el contenido no parece atractivo?,
-Mis dudas fueron saliendo una por una, pero estaba dejando a un lado la razón por la cual he elegido esta profesión: ¡Pasión! realmente me gusta desarrollar software, ya sea desde cero o no, es lo que hago diariamente y me apasiona como profesional. 
+Tenía dos ideas iniciales: tener un blog personal sin ningun tipo de tema en específico o un blog técnico enfocado al área profesional, me he decidido por este último.
 
-Escribir un blog no debe ser diferente asi que decidi enfocarme en crear mi blog, aprender del proceso y disfrutarlo.
+La razón es bastante simple, es lo que hago diariamente, así que a pesar de tener algunos temores ("y si nadie lo lee?") mire algunos diseños de blogs y páginas web, diseñe el actual front end, saque mi editor de texto favorito [vscode](https://code.visualstudio.com/), leí toda la documentación de [gatsbyjs](https://www.gatsbyjs.org/) (claro si no era en react, en qué? ~~php?~~ ) y manos a la obra, después de todo si no hacia mi propio blog sentiría que algo faltaba. Algunos de ustedes seguro entenderán.
 
-##Beneficios
-Existen beneficios, sin duda debe haberlos, no puedo hablar por experiencia propia hasta el momento pero existen expectativas por supuesto.
+Por ahora el blog es mi **MVP** (Minimum Viable Product) - Mínimo Producto Viable, por lo tanto, aún está en desarrollo, a la espera de nuevos características dependiendo de la retroalimentación. 
 
-* Aprender a crear un blog
-* Documentar mi experiencia y conocimiento
-* Que otras personas se beneficien de mis experiencias
-* Hacer contacto profesional
-* Empezar una marca personal
+Con muchos planes por delante pero ahora mismo decir **Hola Mundo** desde mi primer post.
+```javascript
+(function(){
+  console.log("Hola Mundo");
+})()
+```
 
-Podria seguir y si tienes un blog podrias mencionar muchos otros beneficios... por ahora dejare que la experiencia me enseñe y hoy día puedo decir: **Hola Mundo**, desde este pequeño blog :)
+Si tienes algún comentario hazlo saber, puedes contactarme en [twitter](https://twitter.com/HansLGarcia) o [linkedIn](https://www.linkedin.com/in/hansgarcia/)

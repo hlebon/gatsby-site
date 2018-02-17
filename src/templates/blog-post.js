@@ -11,7 +11,8 @@ const styles = {
         color: "#4A4A4A",
     },
     body: {
-        marginTop: "55px"
+        marginTop: "55px",
+        marginBottom: "45px"
     }
 }
 
@@ -43,7 +44,7 @@ class Template extends Component {
                     <footer>
                         <div>
                             { prev && 
-                                ( <p>Previous: <Link to={prev.frontmatter.path}>
+                                ( <p>Anterior: <Link to={prev.frontmatter.path}>
                                      { prev.frontmatter.title }
                                 </Link>
                                 </p> )
@@ -51,7 +52,7 @@ class Template extends Component {
                         </div>
                         <div>
                             {next && 
-                                ( <p>Next: <Link to={next.frontmatter.path}>
+                                ( <p>Siguiente: <Link to={next.frontmatter.path}>
                                  { next.frontmatter.title }
                                 </Link> 
                                 </p> )

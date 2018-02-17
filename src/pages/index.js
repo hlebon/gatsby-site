@@ -4,15 +4,40 @@ import { graphql } from 'graphql'
 import '../layouts/index.css'
 import '../layouts/app.css'
 
-const Header = () => {
-  return (
-    <div className="header">
-      <div>
-        <h1 className="header-title title-color">Hi, I am Hans</h1>
-        <p className="header-subtitle">This is my awesome blog page... </p>
+const languages = ["C#", "Javascript", "React", ".Net Core", "Web API y más..."]
+
+class Header extends Component {
+  state = {
+    feature: ""
+  }
+
+  componentDidMount(){
+    //call callFeature to active list
+  }
+
+  callFeature = () => {
+    setInterval(()=>{
+      languages.forEach((lang, i) =>{
+        setTimeout(()=>{
+          console.log(lang)
+          this.setState({
+            feature: lang
+          })
+        }, i*1000)
+      })
+    }, 5000)
+  }
+
+  render(){
+    return (
+      <div className="header">
+        <div>
+          <h1 className="header-title title-color">Hans García</h1>
+          <p className="header-subtitle">Ingeniero en Sistemas, Fullstack developer</p>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 const generateNewArray = (posts, n) => {

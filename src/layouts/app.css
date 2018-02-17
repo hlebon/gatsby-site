@@ -54,8 +54,8 @@ p > a:hover:after {
 
 .container{
     margin: 0 auto;
-    max-width: 95%;
-    padding: 0px 1.0875rem 1.45rem;
+    max-width: 100%;
+    padding: 0px 1.0875rem .45rem;
     padding-top: 0;
 }
 
@@ -78,11 +78,16 @@ p > a:hover:after {
 }
 
 .article {
+    transition: all .4s ease-in-out;
     margin: 4rem auto;
-    padding: 0 .5rem;
+    padding: .7rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
 }
 
-
+.article:hover{
+    transform: translate3D(0,-1px,0);
+    box-shadow: 0 15px 35px rgba(0,0,0,.1);
+}
 
 .post-title{
     font-size: 1.6rem;
@@ -123,9 +128,9 @@ p > a:hover:after {
     margin: 0 0.3em 0.3em 0;
 }
 
-pre{
-    background: #272822;
-    color: #f8f8f2;
+.feature {
+    background: #4c8bbd !important;
+    color: white;
 }
 
 @media screen and (min-width: 650px){
@@ -145,6 +150,10 @@ pre{
         font-size: 1.5em;
     }
 
+    .article{
+        padding: 2rem;
+    }
+
     .post-title{
         font-size: 1.7rem;
     }
@@ -157,6 +166,11 @@ pre{
 @media screen and (min-width: 1150px){
     .header-title {
         font-size: 2.7em
+    }
+
+    .article{
+        padding: 3rem;
+        box-shadow: 0 1px 2px rgba(0,0,0,.1);
     }
 
     .post-title{
