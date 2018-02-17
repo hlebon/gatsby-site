@@ -17,7 +17,7 @@ Tenía dos ideas iniciales: tener un blog personal sin ningun tipo de tema en es
 
 La razón es bastante simple, es lo que hago diariamente, así que a pesar de tener algunos temores ("y si nadie lo lee?") mire algunos diseños de blogs y páginas web, diseñe el actual front end, saque mi editor de texto favorito [vscode](https://code.visualstudio.com/), leí toda la documentación de [gatsbyjs](https://www.gatsbyjs.org/) (claro si no era en react, en qué? ~~php?~~ ) y manos a la obra, después de todo si no hacia mi propio blog sentiría que algo faltaba. Algunos de ustedes seguro entenderán.
 
-Por ahora el blog es mi **MVP** (Minimum Viable Product) - Mínimo Producto Viable, por lo tanto, aún está en desarrollo, a la espera de nuevos características dependiendo de la retroalimentación. 
+Por ahora el blog es mi **MVP** (Minimum Viable Product) - Mínimo Producto Viable, por lo tanto, aún está en desarrollo a la espera de nuevas características dependiendo de la retroalimentación. 
 
 Con muchos planes por delante pero ahora mismo decir **Hola Mundo** desde mi primer post.
 ```javascript

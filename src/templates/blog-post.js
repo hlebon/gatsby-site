@@ -17,13 +17,7 @@ const styles = {
 }
 
 class Template extends Component {
-    
-    handleNewComment(comment){
-        console.log(comment)
-    }
-
     render(){
-        console.log(this.props)
         const { markdownRemark: post } = this.props.data
         const {data, location, pathContext} = this.props
         const { frontmatter, html } = post
