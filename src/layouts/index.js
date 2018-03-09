@@ -18,6 +18,9 @@ const Header = () => (
         margin: '0 auto',
         maxWidth: 860,
         padding: '1.45rem 1.0875rem',
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between'
       }}
     >
       <h3 style={{ margin: 0 }}>
@@ -31,6 +34,11 @@ const Header = () => (
           Hans Blog
         </Link>
       </h3>
+      <div>
+        <div>
+          <Link to="/projects" style={{color: 'hsla(0,0%,100%,.8)', textDecoration: 'none'}}>Proyectos</Link>
+        </div>
+      </div>
     </div>
   </div>
 )

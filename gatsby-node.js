@@ -7,6 +7,7 @@ const createTagPages = (createPage, posts) => {
     const postsByTags = {}
     
     posts.forEach(({node}) => {
+        console.log(node)
         if(node.frontmatter.tags){
             node.frontmatter.tags.forEach(tag => {
                 if(!postsByTags[tag]){
@@ -46,9 +47,10 @@ const createTagPages = (createPage, posts) => {
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
     const { createPage } = boundActionCreators
+    console.log(createPage)
     const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
 
-    return graphql(`{
+    const gql = graphql(`{
         allMarkdownRemark {
             edges {
                 node {
@@ -57,17 +59,20 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                     frontmatter {
                         id
                         titleid
-                        date
-                        path
                         title
+                        date(formatString: "MMMM DD, YYYY")
+                        path
+                        tags
                         excerpt
-                        tags,
-                        author
                     }
                 }
             }
         }
-    }`).then(result => {
+    }`)
+    
+    console.log(gql)
+    gql.then(result => {
+        console.log("result",result)
         if(result.errors){
             return Promise.reject(result.errors)
         }
@@ -77,6 +82,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         createTagPages(createPage, posts)
 
         posts.forEach(({node}, index) => {
+            console.log("node",node, index)
             createPage({
                 path: node.frontmatter.path,
                 component: blogPostTemplate,
@@ -84,7 +90,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                     prev: index === 0 ? null : posts[index -1].node,
                     next: index === (posts.length -1) ? null : posts[index + 1].node
                 }
-            })
-        })
-    })
+            });
+        });
+    });
+
+    return gql
 }

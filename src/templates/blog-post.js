@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
-import { graphql } from 'graphql';
+import { graphql } from 'graphql'
 import Helmet from 'react-helmet'
 
 const styles = {
@@ -18,6 +18,7 @@ const styles = {
 
 class Template extends Component {
     render(){
+        console.log("blog-post",this.props)
         const { markdownRemark: post } = this.props.data
         const {data, location, pathContext} = this.props
         const { frontmatter, html } = post
@@ -26,7 +27,7 @@ class Template extends Component {
 
         return (
             <div>
-                <Helmet title={`${title} - My blog`}/>
+                <Helmet title={`${title} - Hans Garcia`}/>
                 <div>
                     <header className={"title-color"}>
                         <h1 style={styles.title}>{title}</h1>

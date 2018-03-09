@@ -19,7 +19,6 @@ class Header extends Component {
     setInterval(()=>{
       languages.forEach((lang, i) =>{
         setTimeout(()=>{
-          console.log(lang)
           this.setState({
             feature: lang
           })
@@ -63,14 +62,22 @@ const generateNewArray = (posts, n) => {
 class PostList extends Component{
   state = {
     pagina: 0,
-    posts: null
+    posts: null,
+    error: false
   }
 
   componentDidMount(){
-    const posts = generateNewArray(this.props.data.allMarkdownRemark.edges, 0)
-    this.setState({
-      posts
-    })
+    if(this.props.data){
+      const posts = generateNewArray(this.props.data.allMarkdownRemark.edges, 0)
+      this.setState({
+        posts
+      })
+    }else{
+      this.setState({
+        posts: false
+      })
+    }
+    
   }
 
   olderPosts = () => {
@@ -78,8 +85,6 @@ class PostList extends Component{
       this.setState((prevState) => ({
         pagina: prevState.pagina + 1
       }))
-    }else{
-      alert("No hay mas posts antiguos")
     }
   }
 
@@ -88,20 +93,18 @@ class PostList extends Component{
       this.setState((prevState) => ({
         pagina: prevState.pagina - 1
       }))
-    }else{
-      alert("No hay post mas recientes")
     }
   }
 
   render(){
     console.log(this.state)
-    const posts = this.state.posts
-    console.log(posts)
+    const { posts } = this.state
     return (
       <div>
-        { posts && 
+        { posts ? 
         <div>
           {posts[this.state.pagina].map(({node: post}, index) => {
+            console.log(post)
             const { frontmatter } = post
             return (
               <article className="article" key={index}>
@@ -118,7 +121,7 @@ class PostList extends Component{
                     <span>{frontmatter.author} on: </span>
                   </div>
                   <div className="post-meta-tag-group">
-                      {post.frontmatter.tags.map((tag, index) => {
+                      {frontmatter.tags.map((tag, index) => {
                         return (
                         <p key={index} className="post-meta-link">
                           <Link to={`/tags/${tag}`}>
@@ -134,16 +137,17 @@ class PostList extends Component{
                 </footer>
               </article>
             )
-          })}
-        </div>
+          })} 
+        </div> : <h1 style={{ textAlign: 'center' }}>Error, something happend</h1>
         }
       </div>
     )
   }  
 }
 
-const IndexPage = (query) => {
+export default function Index(query) {
   const edges = query.data
+  console.log("IndexPage",query, edges)
   return (
     <div style={{color: 'black'}}>
       <Header />
@@ -152,14 +156,14 @@ const IndexPage = (query) => {
   )
 }
 
-export const query = graphql`
+export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark {
-      totalCount
-      edges{
-        node{
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          excerpt(pruneLength: 250)
           id
-          frontmatter{
+          frontmatter {
             id
             titleid
             title
@@ -167,12 +171,10 @@ export const query = graphql`
             path
             tags
             excerpt
-            author
           }
         }
       }
     }
   }
-`
+`;
 
-export default IndexPage

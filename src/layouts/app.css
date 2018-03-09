@@ -30,12 +30,12 @@ p > a:hover {
     text-decoration: none;
 }
   
-p > a:hover:after {
+p > a:hover:after, li a:hover:after {
     border-color: #457DFB;
     right: 0;
 }
   
-p > a:after {
+p > a:after, li a:after {
     border-radius: 1em;
     border-top: .1em solid #2F56B0;
     content: "";
@@ -47,7 +47,7 @@ p > a:after {
                 border-color .4s ease-out;
 }
 
-p > a:hover:after {
+p > a:hover:after, li a:hover:after {
     animation: anchor-underline 2s cubic-bezier(0,.5,0,1) infinite;
     border-color: #457DFB;
 }
@@ -129,8 +129,23 @@ p > a:hover:after {
 }
 
 .feature {
+    background-color: #c7def8;
+    color: #000000;
+}
+
+ul li small{
     background: #4c8bbd !important;
     color: white;
+}
+
+ul li:nth-child(3n+3) small{
+    background-color: #9944dd !important;
+    color: #ffffff
+}
+
+ul li:nth-child(4n-1) small{
+    background-color: #006b75 !important;
+    color: #ffffff;
 }
 
 @media screen and (min-width: 650px){

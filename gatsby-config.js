@@ -1,7 +1,8 @@
 module.exports = {
-  pathPrefix: "/gatsby-site",
+  pathPrefix: "/",
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Fullstack blog`,
+    keywords: 'blog'
   },
   plugins: [
     {
@@ -17,8 +18,8 @@ module.exports = {
           {
             resolve: `gatsby-source-filesystem`,
             options: {
-              name: `src`,
-              path: `${__dirname}/src`
+              name: `pages`,
+              path: `${__dirname}/src/pages`
             }
           }
         ]
