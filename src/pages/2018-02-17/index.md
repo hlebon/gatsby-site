@@ -21,9 +21,7 @@ Por ahora el blog es mi **MVP** (Minimum Viable Product) - Mínimo Producto Viab
 
 Con muchos planes por delante pero ahora mismo decir **Hola Mundo** desde mi primer post.
 ```javascript
-(function(){
   console.log("Hola Mundo");
-})()
 ```
 
 Si tienes algún comentario hazlo saber, puedes contactarme en [twitter](https://twitter.com/HansLGarcia) o [linkedIn](https://www.linkedin.com/in/hansgarcia/)

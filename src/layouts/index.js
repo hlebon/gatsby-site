@@ -36,7 +36,7 @@ const Header = () => (
       </h3>
       <div>
         <div>
-          <Link to="/projects" style={{color: 'hsla(0,0%,100%,.8)', textDecoration: 'none'}}>Proyectos</Link>
+          <Link to="/projects" style={{color: 'hsla(0,0%,100%,.8)', textDecoration: 'none'}}>Projects</Link>
         </div>
       </div>
     </div>
