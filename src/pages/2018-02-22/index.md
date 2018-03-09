@@ -1,14 +1,13 @@
 ---
-id: "2"
-path: "/elementos-componentes-y-jsx"
-titleid: "Intro a react"
-date: "2018-02-22T03:16:33.962Z"
+id: "1"
+path: "/react-elementos-componentes-jsx"
+titleid: "react-elementos"
+date: "2018-02-22T01:12:33.962Z"
 title: "React: Elementos, Componentes y JSX"
-tags: ['react', 'elementos', "componentes", "jsx]
-excerpt: "Trata con data es esencial para todo programador, en este articulo veremos como hacer request con fetch en un ambiente react"
+tags: ['react', 'componentes', 'elementos', 'jsx']
+excerpt: "En este post estaremos aprendiendo de manera rapida algunos conceptos básicos de react"
 author: "Hans García"
 ---
-
 
 En este articulo introductorio vamos a estar aprendiendo conceptos basicos de react, si deseas probar el codigo puedes hacerlo con un editor online como [codesandbox](https://codesandbox.io) o [codepen](https://codepen.io/).
 
@@ -19,14 +18,30 @@ Una vez finalizado este articulo habras aprendido sobre...
 2. Diferencias entre class components y functional stateless components
 3. Que es JSX
 
-##Qué es un elemento en react
-Un elemento describe lo que queremos ver la pantalla.
+##Qué es un elemento en react?
+Un elemento describe lo que queremos ver en pantalla.
 ```javascript
   //elemento 
   const titulo = React.createElement("h1", null, "Hola Mundo")
 ```
 
 En este ejemplo, hemos utilizado la api de react para crear un elemento, el cual agregado al dom nos mostrara un `<h1>Hola Mundo</h1>`.
+Los elementos son los piezas de codigo más pequeñas en react, estas no ayudan a construir nuestra UI de cara al usuario.
+
+Un Elemento se crea con el método **React.createElement** y siempre debe estar envuelta en un elemento padre.
+
+```javascript
+  //elemento 
+  const titulo = React.createElement("h1", null, "Hola Mundo!"); 
+  const contenedor = React.createElement("div", null, titulo);
+```
+
+```javascript
+  //HTML 
+  <div>
+    <h1>Hola Mundo</h1>
+  </div>
+```
 
 ##Creación de Componentes
 Podemos pensar en un **componente** como un función que acepta argumentos de entrada (inputs: props) y nos proporciona un valor de retorno. Todo componente debe tener un valor de retorno este valor es un **Elemento** en react que, como ya hemos mencionado, describe lo que queremos ver en nuestra pantalla.
@@ -116,7 +131,7 @@ Para podemos utilizar javascript en JSX debemos hacerlo con brackes: ``<h1>Hola 
 
 
 ##Conclusión
-En este articulo se ha explicado de manera general conceptos básicos de react. En un post ~~futuro~~ cercano haremos nuestros componentes dinámicos.
+En este articulo se ha explicado de manera general conceptos básicos de react. En un post ~~futuro~~ cercano haremos componentes dinámicos.
 
 Si tienes algún comentario hazlo saber, puedes contactarme en [twitter](https://twitter.com/HansLGarcia) o [linkedIn](https://www.linkedin.com/in/hansgarcia/)
 
