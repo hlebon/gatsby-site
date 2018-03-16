@@ -16,7 +16,8 @@
     "react-disqus-thread": "^0.4.0"
   },
   "keywords": [
-    "gatsby"
+    "my blog",
+    "react", "graphql"
   ],
   "license": "MIT",
   "main": "n/a",

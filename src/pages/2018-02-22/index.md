@@ -1,10 +1,10 @@
 ---
-id: "1"
+id: "3"
 path: "/react-elementos-componentes-jsx"
 titleid: "react-elementos"
 date: "2018-02-22T01:12:33.962Z"
 title: "React: Elementos, Componentes y JSX"
-tags: ['react', 'componentes', 'elementos', 'jsx']
+tags: ['react,', 'componentes,', 'elementos,', 'jsx,', "javascript"]
 excerpt: "En este post estaremos aprendiendo de manera rapida algunos conceptos básicos de react"
 author: "Hans García"
 ---
@@ -12,15 +12,16 @@ author: "Hans García"
 En este articulo introductorio vamos a estar aprendiendo conceptos basicos de react, si deseas probar el codigo puedes hacerlo con un editor online como [codesandbox](https://codesandbox.io) o [codepen](https://codepen.io/).
 
 Una vez finalizado este articulo habras aprendido sobre...
-1. Que es un elemento
-2. Creación de componentes
-3. Diferencias entre class components y functional stateless components
-4. Que es JSX
+1. Elementos.
+2. Creación de componentes.
+3. Diferencias entre class components y functional stateless components.
+4. Que es JSX.
 
 ## Qué es un elemento en react?
-Un elemento describe lo que queremos ver en la pantalla.
+La manera mas sencilla de describir un elemento es visitando nuestra pagina favorita, todo lo que vemos, ya sea un titulo, una imagen, una lista ordenada etc, es un elemento.
+En otras palabras un elemento describe todo lo que queremos ver en la pantalla.
 
-Podemos crear un elemento con el metodo createElement de la libreria React.
+Podemos crear un elemento con el método `createElement` de la libreria **React**.
 ```javascript
   //elemento 
   const titulo = React.createElement("h1", null, "Mi titulo")
@@ -28,23 +29,33 @@ Podemos crear un elemento con el metodo createElement de la libreria React.
   //HTML
   <h1>Mi titulo</h1>
 ```
-createElement acepta 3 parametros `createElement(type, [props], [...children])`
-1. **type**: por lo general un tag html, por ejemplo: **h1, span**
-2. **props**: una lista de propiedades, `{ class: "className" }`, podemos agregar una clase a nuestro **h1**
-3. **...children**: El contenido o hijos del elemento que estamos creando, este puede ser otro elemento react
 
+En el ejemplo anterior hemos creado un elemento que hemos llamado **titulo**.
+
+`createElement` acepta 3 parametros `createElement(type, [props], [...children])`
+1. **type**: por lo general un tag html, por ejemplo: **h1, span**.
+2. **props**: una lista de propiedades, `{ class: "className" }`, podemos agregar una clase html (`.class`) a nuestro tag `h1`.
+3. **...children**: El contenido o hijos del elemento que estamos creando, este puede ser otro elemento react.
+
+Veamos el siguiente ejemplo.
 
 ```javascript 
+  //crear titulo
   const titulo = React.createElement("h1", null, "Mi titulo")
+  //crear contenedor del titulo
   const contenedor = React.createElement("div", null, titulo)
-  //HTML
+```
+
+
+Codigo HTML
+```html
   <div>
      <h1>Mi titulo</h1>
   </div>
 ```
 
-Pongamos la teoria en práctica
-Crear un elemento en react que muestre el siguiente html
+Pongamos la teoria en práctica.
+Crea un elemento en react que muestre el siguiente html
 
 ```html 
   <header class="container">
@@ -54,7 +65,9 @@ Crear un elemento en react que muestre el siguiente html
 ```
 
 ## Creación de Componentes
-Podemos pensar en un **componente** como un función que acepta parametros de entrada (inputs: props) y nos proporciona un valor de retorno. Todo componente debe tener un valor de retorno este valor es un **Elemento** en react que, como ya hemos mencionado, describe lo que queremos ver en nuestra pantalla.
+Una vez que sabemos que un elemento podemos pensar en un **componente** como un función que acepta parametros de entrada (inputs: props) y nos proporciona un valor de retorno. 
+
+Todo componente debe tener un valor de retorno, este valor es un **Elemento** en react que, como ya hemos mencionado, describe lo que queremos ver en nuestra pantalla.
 
 Veamos un ejemplo:
 ```javascript 
@@ -63,9 +76,13 @@ Veamos un ejemplo:
   }
 ```
 
+En el ejemplo anterior hemos creado un componente llamado `MiComponente`, este componente es un función javascript, con la que probablemente ya estas muy familiarizado, la unica diferencia es que esta función retorna un `elemento` en react.
+
 Podemos declarar un componente de dos maneras diferentes
 - Como una funcion (functional component)
-- Como una class javascript
+- Como una clase javascript (class component)
+
+En el ejemplo anterior pudimos observar como declarar un ``functional component``, el siguiente ejemplo muestra como declarar un `class componente`
 
 ```javascript 
   // Ejemplo de un class component
@@ -77,7 +94,7 @@ Podemos declarar un componente de dos maneras diferentes
   }
 ```
 
-Un componente nos permite retulizar nuestro codigo, dividir nuestra UI en pedazos más pequeños, simplifica el desarrollo al tratar un componente de manera independiente.
+Un componente nos permite reutilizar nuestro codigo, dividir nuestra UI en pedazos más pequeños, simplifica el desarrollo al tratar un componente de manera independiente.
 
 ## Renderizar elementos y componentes
 Para renderizar un componente en pantalla utilizaremos la api de react-dom
@@ -113,9 +130,9 @@ Aqui es donde damos gracias por **JSX**
 ```javascript 
   const titulo = <h1>Mi titulo</h1>
 ```
-JSX no es html, ni tampoco un string en javascript, JXS es una extensión de javascript que nos permite escribir nuestros elementos al estilo html, este codigo JSX es compilado a un objecto javascript. En otro articulo hablaremos sobre este babel y el virtual DOM.
+JSX no es html, ni tampoco un string en javascript, JXS es una extensión de javascript que nos permite escribir nuestros elementos al estilo html, este codigo JSX es compilado a un objecto javascript. En otro articulo hablaremos sobre este proceso, babel y el virtual DOM.
 
-Por ahora JSX facilita el proceso para creación transformando nuestro codigo de JSX a Javascript
+Por ahora debemos saber que JSX facilita el proceso para la creación de elementos transformando nuestro codigo de JSX a Javascript.
 
 ```javascript 
   //jsx
@@ -124,14 +141,14 @@ Por ahora JSX facilita el proceso para creación transformando nuestro codigo de
   const titulo = React.createElement("div", null, "Mi titulo")
 ```
 
-## Resúmen
-1. En este post hemos aprendido
-2. Que es un elemento en react
-3. Como crear componentes
-4. Las dos formas de crear un componente: functional & class component
-5. renderizar componentes
-7. utilizar jsx
+## Resumen
+En este post hemos aprendido
+
+1. Que es un elemento en react.
+2. Como crear componentes.
+3. Las dos formas de crear un componente: functional & class component.
+4. renderizar componentes.
+5. utilizar jsx.
 
 
 Si tienes algún comentario hazlo saber, puedes contactarme en [twitter](https://twitter.com/HansLGarcia) o [linkedIn](https://www.linkedin.com/in/hansgarcia/)
-

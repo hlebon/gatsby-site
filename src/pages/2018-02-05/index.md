@@ -2,14 +2,15 @@
 id: "1"
 path: "/hola-mundo"
 titleid: "Hola Mundo"
-date: "2018-02-17T02:12:33.962Z"
+date: "2018-02-05T02:12:33.962Z"
 title: "Hola Mundo"
-tags: ['blog', 'intro']
+tags: ['blog,', 'intro']
 excerpt: "Escribir un blog puede ser dificil pero como toda persona me gustan los retos, en este articulo quiero presentarme a la comunidad y decir Hello World"
 author: "Hans García"
 ---
 
 ##Hola Mundo
+
 Después de un tiempo, después  de un buen tiempo de querer iniciar un blog por fin ha llegado ese día.
 Claro, no paso de la noche a la mañana. 
 

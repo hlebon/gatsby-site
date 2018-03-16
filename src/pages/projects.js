@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import Link,  { withPrefix } from 'gatsby-link'
 
-const projectsToShow = ["Contacts","react-github-battle",
+const projectsToShow = [
+    "crm-api",
     "reactnv-todoapp",
-    "search-image-app",
+    "gatsby-site",
+    "react-github-battle",
+    "react-todolist",
     "react-udacimeals",
+    "search-image-app",
+    "cpa-landingpage",
+    "contacts",
     "udacifitness",
+    "reactnd-project-myreads-starter",
     "dynamic-csharp-concepts",
-    "gatsby-site"
+    "notetaker"
+    
 ]
 
 class Project extends Component{
@@ -23,6 +31,7 @@ class Project extends Component{
         fetch(`https://api.github.com/users/hlebon/repos`)
         .then(repos => repos.json())
         .then(repos => {
+            console.log(repos)
             this.setState({
                 repos: repos.filter(repo => {
                     return projectsToShow.indexOf(repo.name) > 0 ? true : false
@@ -34,7 +43,9 @@ class Project extends Component{
         const { repos } = this.state
         return (
             <div>
-                <h1>Github Repos</h1>
+                <h1>Personal Projects</h1>
+                <p>Follow the instruction notes in the github pages to start every project.</p>
+                <p>List:</p>
                 <div>
                     <ul>
                         {  repos ? repos.map(( repo ) => {
