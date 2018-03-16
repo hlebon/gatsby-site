@@ -2,17 +2,16 @@
 id: "1"
 path: "/hola-mundo"
 titleid: "Hola Mundo"
-date: "2018-02-05T02:12:33.962Z"
+date: "2018-02-11T02:12:33.962Z"
 title: "Hola Mundo"
-tags: ['blog,', 'intro']
+tags: ['blog', 'intro']
 excerpt: "Escribir un blog puede ser dificil pero como toda persona me gustan los retos, en este articulo quiero presentarme a la comunidad y decir Hello World"
 author: "Hans García"
 ---
 
-##Hola Mundo
+Después de un tiempo, después  de un buen tiempo de querer iniciar un blog por fin ha llegado ese día. Claro, no paso de la noche a la mañana.
 
-Después de un tiempo, después  de un buen tiempo de querer iniciar un blog por fin ha llegado ese día.
-Claro, no paso de la noche a la mañana. 
+# Hola Mundo
 
 Tenía dos ideas iniciales: tener un blog personal sin ningun tipo de tema en específico o un blog técnico enfocado al área profesional, me he decidido por este último.
 
@@ -21,6 +20,7 @@ La razón es bastante simple, es lo que hago diariamente, así que a pesar de te
 Por ahora el blog es mi **MVP** (Minimum Viable Product) - Mínimo Producto Viable, por lo tanto, aún está en desarrollo a la espera de nuevas características dependiendo de la retroalimentación. 
 
 Con muchos planes por delante pero ahora mismo decir **Hola Mundo** desde mi primer post.
+
 ```javascript
   console.log("Hola Mundo");
 ```

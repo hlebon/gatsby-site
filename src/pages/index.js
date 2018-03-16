@@ -107,14 +107,12 @@ class PostList extends Component{
   }
 
   render(){
-    console.log(this.state)
     const { posts } = this.state
     return (
       <div>
         { posts ? 
         <div>
           {posts[this.state.pagina].map(({node: post}, index) => {
-            console.log(post)
             const { frontmatter } = post
             return (
               <article className="article" key={index}>
@@ -148,7 +146,7 @@ class PostList extends Component{
               </article>
             )
           })} 
-        </div> : <h1 style={{ textAlign: 'center' }}>Error, something happend</h1>
+        </div> : <h1 style={{ textAlign: 'center' }}>Currently working, please come later :) </h1>
         }
       </div>
     )
@@ -157,7 +155,6 @@ class PostList extends Component{
 
 export default function Index(query) {
   const edges = query.data
-  console.log("IndexPage",query, edges)
   return (
     <div style={{color: 'black'}}>
       <Header />

@@ -1,10 +1,10 @@
 ---
 id: "2"
 path: "/introduccion-a-react"
-titleid: "introduccion-a-react"
+titleid: "Introduccion a react"
 date: "2018-02-16T01:12:33.962Z"
-title: "Introducción a React: Qué es React.js"
-tags: ['react,','intro,','jsx,', "javascript"]
+title: "Introducción a React: Que es React.js"
+tags: ['react','intro','jsx', "javascript"]
 excerpt: "React es una librería javascript muy poderosa, creada por facebooks que nos permite crear aplicaciones web..."
 author: "Hans García"
 ---
