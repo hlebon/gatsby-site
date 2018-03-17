@@ -14,11 +14,11 @@ React es una librería javascript muy poderosa que nos permite crear aplicacione
 Temas:
 
 1. Qué es react.js.
-2. Composición de componentes.
-3. Programación funcional.
+2. Código declarativo e imperativo.
+3. Composición de componentes.
 
 
-## Qué es react
+## Qué es react.js?
 
 React es una librería de javascript desarrollada por facebook, muchos ven a react como el **V** (View - Vista) en el patrón **MVC** (Modelo-Vista-Controlador).
 
@@ -38,7 +38,7 @@ Veamos dos ejemplos:
 
 ```javascript
 const paises = ["Panamá","Chile","Canadá"];
-for(let i = 0; i < paises.length; i++){
+for(let i = 0; i < paises.length - 1; i++){
     const val = paises[i];
     console.log(val);
 }
@@ -96,17 +96,17 @@ Resp: { promedio: 4.5, nombreCompleto: "Hans Garcia"
 ```
 
 ## React es solo javascript
-La ultima caracteristicas que me encanta de react es que es solo javascript, sin dudas estoy importando una libreria y utilizandola pero todo lo demas pertenece a javascript de modo tal que no tengo que aprender un nuevo template que debo agregar a html. 
+
+La ultima caracteristicas que me encanta de react es que es solo javascript, sin dudas estoy utilizando una librería y utilizandola pero todo lo demas pertenece a javascript de modo tal que no tengo que aprender un nuevo template que debo agregar a html.
 
 Dentro de los metodos más utilizado podemos encontrar:
 
-1. map
-2. filter
-3. reduce
+1. **map**
+2. **filter**
+3. **reduce**
 
 Entre muchos otros más.
 
 Aprender react es aprender javascript.
-
 
 Si tienes algún comentario hazlo saber, puedes contactarme en [twitter](https://twitter.com/HansLGarcia) o [linkedIn](https://www.linkedin.com/in/hansgarcia/)

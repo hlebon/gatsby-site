@@ -15,7 +15,7 @@ Una vez finalizado este articulo habras aprendido sobre...
 
 1. Elementos.
 2. Creación de componentes.
-3. Diferencias entre class components y functional stateless components.
+3. Diferencias entre class components y stateless functional components.
 4. Que es JSX.
 
 # Elementos
