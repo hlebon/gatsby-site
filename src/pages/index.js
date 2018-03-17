@@ -126,7 +126,7 @@ class PostList extends Component{
                 </section>
                 <footer className="post-meta">
                   <div>
-                    <span>{frontmatter.author} on: </span>
+                    <span>{frontmatter.author} tags: </span>
                   </div>
                   <div className="post-meta-tag-group">
                       {frontmatter.tags.map((tag, index) => {
