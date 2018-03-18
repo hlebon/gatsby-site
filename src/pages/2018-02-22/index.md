@@ -9,9 +9,9 @@ excerpt: "En este post estaremos aprendiendo de manera rapida algunos conceptos 
 author: "Hans García"
 ---
 
-En este articulo introductorio vamos a estar aprendiendo conceptos basicos de react, si deseas probar el codigo puedes hacerlo con un editor online como [codesandbox](https://codesandbox.io) o [codepen](https://codepen.io/).
+En este artículo introductorio vamos a estar aprendiendo conceptos básicos de react; Si deseas probar el código puedes hacerlo con un editor online como [codesandbox](https://codesandbox.io) o [codepen](https://codepen.io/).
 
-Una vez finalizado este articulo habras aprendido sobre...
+Una vez finalizado este artículo habrás aprendido sobre...
 
 1. Elementos.
 2. Creación de componentes.
@@ -20,8 +20,8 @@ Una vez finalizado este articulo habras aprendido sobre...
 
 # Elementos
 
-La manera mas sencilla de describir un elemento es visitando nuestra pagina favorita, todo lo que vemos, ya sea un titulo, una imagen, una lista ordenada etc, es un elemento.
-En otras palabras un elemento describe todo lo que queremos ver en la pantalla.
+La manera más sencilla de describir un elemento es visitando nuestra página favorita, todo lo que vemos, ya sea un título, una imagen, una lista ordenada etc. es un elemento.
+En otras palabras, un elemento describe todo lo que queremos ver en la pantalla.
 
 Podemos crear un elemento con el método `createElement` de la libreria **React**.
 
@@ -33,7 +33,7 @@ Podemos crear un elemento con el método `createElement` de la libreria **React*
   <h1>Mi titulo</h1>
 ```
 
-En el ejemplo anterior hemos creado un elemento que hemos llamado **titulo**.
+En el ejemplo anterior hemos creado un elemento que hemos llamado **título**.
 
 `createElement` acepta 3 parametros `createElement(type, [props], [...children])`
 
@@ -50,7 +50,7 @@ Veamos el siguiente ejemplo.
   const contenedor = React.createElement("div", null, titulo)
 ```
 
-Codigo HTML
+Código HTML
 
 ```html
   <div>
@@ -58,7 +58,7 @@ Codigo HTML
   </div>
 ```
 
-Pongamos la teoria en práctica.
+Pongamos la teoría en práctica.
 Crea un elemento en react que muestre el siguiente html
 
 ```html 
@@ -70,7 +70,7 @@ Crea un elemento en react que muestre el siguiente html
 
 ## Creación de Componentes
 
-Una vez que sabemos que un elemento podemos pensar en un **componente** como un función que acepta parametros de entrada (inputs: props) y nos proporciona un valor de retorno. 
+Una vez que sabemos que un elemento podemos pensar en un **componente** como una función que acepta parámetros de entrada (inputs: props) y nos proporciona un valor de retorno.
 
 Todo componente debe tener un valor de retorno, este valor es un **Elemento** en react que, como ya hemos mencionado, describe lo que queremos ver en nuestra pantalla.
 
@@ -82,7 +82,7 @@ Veamos un ejemplo:
   }
 ```
 
-En el ejemplo anterior hemos creado un componente llamado `MiComponente`, este componente es un función javascript, con la que probablemente ya estas muy familiarizado, la unica diferencia es que esta función retorna un `elemento` en react.
+En el ejemplo anterior hemos creado un componente llamado `MiComponente`, este componente es una función javascript, con la que probablemente ya estas muy familiarizado, la única diferencia es que esta función retorna un `elemento` en react.
 
 Podemos declarar un componente de dos maneras diferentes
 
@@ -101,11 +101,11 @@ En el ejemplo anterior pudimos observar como declarar un ``functional component`
   }
 ```
 
-Un componente nos permite reutilizar nuestro codigo, dividir nuestra UI en pedazos más pequeños, simplifica el desarrollo al tratar un componente de manera independiente.
+Un componente nos permite reutilizar nuestro código, dividir nuestra UI en pedazos más pequeños, simplifica el desarrollo al tratar un componente de manera independiente.
 
 ## Renderizar elementos y componentes
 
-Para renderizar un componente en pantalla utilizaremos la api de react-dom
+Para renderizar un componente en pantalla utilizaremos una función de react-dom llamada **render**.
 
 ```javascript 
   // Importar react dom
@@ -118,12 +118,10 @@ Para renderizar un componente en pantalla utilizaremos la api de react-dom
   render(<MiComponente/>, document.getElementById('root'));
 ```
 
-El metodo render acepta dos parametros
+La función **render** acepta dos parametros de entrada.
 
-1. El componente o elemento a renderizar
-2. El nodo DOM donde quiero renderizarlo
-
-Un punto a destacar es que todos nuestros componentes debe inicializar con letra mayuscula, de esta manera react puede diferenciar entre un elemento tag html y un componente, si queremos utilizar un componente lo hacemos con la sintaxis: `<MiComponente />`, si queremos utilizar un elemento simplemente escribimos el nombre del elemento.
+1. El componente o elemento a renderizar.
+2. El nodo DOM donde quiero renderizarlo.
 
 ```javascript 
   //renderizar un componente
@@ -132,18 +130,20 @@ Un punto a destacar es que todos nuestros componentes debe inicializar con letra
   render(elemento, document.getElementById('root'));
 ```
 
+Un punto a destacar es que todos nuestros componentes deben inicializar con letra mayúscula, de esta manera react puede diferenciar entre un elemento tag html y un componente, si queremos utilizar un componente lo hacemos con la sintaxis: `<MiComponente />`, si queremos utilizar un elemento simplemente escribimos el nombre del elemento.
+
 ## JSX
 
-Parece ser que utilizar react es mas complicado de lo esperado, despues de todos quien puede estar anidando **createElement** uno tras otros.
+Parece ser que utilizar react es más complicado de lo esperado, despues de todos quien puede estar anidando **createElement** uno tras otros.
 Aqui es donde damos gracias por **JSX**
 
 ```javascript 
   const titulo = <h1>Mi titulo</h1>
 ```
 
-JSX no es html, ni tampoco un string en javascript, JXS es una extensión de javascript que nos permite escribir nuestros elementos al estilo html, este codigo JSX es compilado a un objecto javascript. En otro articulo hablaremos sobre este proceso, babel y el virtual DOM.
+JSX no es html, ni tampoco un string en javascript, JXS es una extensión de javascript que nos permite escribir nuestros elementos al estilo html, este código JSX es compilado a un objeto javascript. En otro artículo hablaremos sobre este proceso, babel y el virtual DOM.
 
-Por ahora debemos saber que JSX facilita el proceso para la creación de elementos transformando nuestro codigo de JSX a Javascript.
+Por ahora debemos saber que JSX facilita el proceso para la creación de elementos transformando nuestro código de JSX a Javascript.
 
 ```javascript 
   //jsx
@@ -161,6 +161,5 @@ En este post hemos aprendido
 3. Las dos formas de crear un componente: functional & class component.
 4. renderizar componentes.
 5. utilizar jsx.
-
 
 Si tienes algún comentario hazlo saber, puedes contactarme en [twitter](https://twitter.com/HansLGarcia) o [linkedIn](https://www.linkedin.com/in/hansgarcia/)

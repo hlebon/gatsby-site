@@ -9,7 +9,7 @@ excerpt: "React es una librería javascript muy poderosa, creada por facebooks q
 author: "Hans García"
 ---
 
-React es una librería javascript muy poderosa que nos permite crear aplicaciones web. Tambien esta [react-native](https://facebook.github.io/react-native/) que esta enfocada en crear aplicaciones moviles nativas pero hablaremos más sobre el tema en otro post.
+React es una librería javascript muy poderosa que nos permite crear aplicaciones web. También esta [react-native](https://facebook.github.io/react-native/) que está enfocada en crear aplicaciones móviles nativas pero hablaremos más sobre el tema en otro post.
 
 Temas:
 
@@ -22,19 +22,19 @@ Temas:
 
 React es una librería de javascript desarrollada por facebook, muchos ven a react como el **V** (View - Vista) en el patrón **MVC** (Modelo-Vista-Controlador).
 
-React puede ser visto como un librería pero rapidamente se transforma en una framework gracias a todas las dependencias que suelen utilizarse para crear apps.
+React puede ser visto como una librería pero rápidamente se puede transformar en una framework gracias a todos los componentes que pueden utilizarse para crear una aplicación.
 
 ¿Pero que hace a react especial?
 
 ## Código declarativo
 
-React es una libreria javascript de código declarativo.
+React es una librería javascript de código declarativo.
 Veamos dos ejemplos:
 
 1. Código declarativo.
-2. Codigo imperativo.
+2. Código imperativo.
 
-**Código Imperativo**: Nosotros le decimos a javascript que hacer y como hacerlo.
+**Código Imperativo**: Nosotros le decimos a javascript que hacer y cómo hacerlo.
 
 ```javascript
 const paises = ["Panamá","Chile","Canadá"];
@@ -45,8 +45,7 @@ for(let i = 0; i < paises.length - 1; i++){
 ```
 
 En esta ocasión le decimos javascript que ~~por favor~~ en un loop inicie una variable llamada `i = 0`, que sume `1++`, hasta que `i < paises.length` - en otras palabras: el total de elementos en el array,
-despues imprime el valor que se encuentra en el array.
-
+después imprime el valor que se encuentra en el array.
 
 **Código Declarativo**: Nosotros declaramos que queremos y javascript se encarga del resto.
 
@@ -57,15 +56,15 @@ paises.forEach(function ImprimeElemento(pais){
 })
 ```
 
-Nosotros le pedimos a javascript: sabes, quiero que por cada elemento de este array imprimas el valor correspondiente. y puff! magics happens.
+Nosotros le pedimos a javascript: sabes, quiero que por cada elemento de este array imprimas el valor correspondiente. y puff! magic happens.
 
 ## Componentes
 
-Gracias a que react esta basado en componentes podemos dividir UI de nuestra aplicación en pedazos más pequeños y reutilizables. Asi podemos pensar en cada piezas de manera aislada.
+Gracias a que react está basado en componentes podemos dividir la UI de nuestra aplicación en pedazos más pequeños y reutilizables. Así podemos pensar en cada pieza de manera aislada.
 
 ### Composición de Componentes
 
-React nos permite combinar componentes para crear componentes mas complejos igual que en javascript que podemos combinar funciones para crear funciones mas complejas.
+React nos permite combinar componentes para crear componentes más complejos igual que en javascript que podemos combinar funciones para crear funciones más complejas.
 
 
 ```javascript
@@ -97,7 +96,7 @@ Resp: { promedio: 4.5, nombreCompleto: "Hans Garcia"
 
 ## React es solo javascript
 
-La ultima caracteristicas que me encanta de react es que es solo javascript, sin dudas estoy utilizando una librería y utilizandola pero todo lo demas pertenece a javascript de modo tal que no tengo que aprender un nuevo template que debo agregar a html.
+La ultima características que me encanta de react es que es solo javascript de modo tal que no tengo que aprender un nuevo template para usar en el html.
 
 Dentro de los metodos más utilizado podemos encontrar:
 

@@ -13,7 +13,7 @@ Después de un tiempo, después  de un buen tiempo de querer iniciar un blog por
 
 # Hola Mundo
 
-Tenía dos ideas iniciales: tener un blog personal sin ningun tipo de tema en específico o un blog técnico enfocado al área profesional, me he decidido por este último.
+Tenía dos ideas iniciales: tener un blog personal sin ningún tipo de tema en específico o un blog técnico enfocado al área profesional, me he decidido por este último.
 
 La razón es bastante simple, es lo que hago diariamente, así que a pesar de tener algunos temores ("y si nadie lo lee?") mire algunos diseños de blogs y páginas web, diseñe el actual front end, saque mi editor de texto favorito [vscode](https://code.visualstudio.com/), leí toda la documentación de [gatsbyjs](https://www.gatsbyjs.org/) (claro si no era en react, en qué? ~~php?~~ ) y manos a la obra, después de todo si no hacia mi propio blog sentiría que algo faltaba. Algunos de ustedes seguro entenderán.
 
