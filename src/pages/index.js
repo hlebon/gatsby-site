@@ -134,7 +134,7 @@ class PostList extends Component{
                         <p key={index} className="post-meta-link">
                           <Link to={`/tags/${tag}`}>
                             {tag}
-                          </Link>
+                          </Link>{(frontmatter.tags[index+1] === undefined) ? "" : ","}
                         </p>
                         )
                       })}
