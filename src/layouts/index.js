@@ -46,7 +46,7 @@ const Header = () => (
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="The Fullstack blog"
+      title="Hans blog"
       meta={[
         { name: 'description', content: 'Fullstack developer' },
         { name: 'keywords', content: 'c#, javascript, reactjs, MVC, asp.net, entity framework' },
