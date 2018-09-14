@@ -2,8 +2,8 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="header">
-      <div>
+    <header>
+      <div className="header">
         <h1 className="header-title title-color">Hans García</h1>
         <p className="header-subtitle">
           Computer science engineer, Fullstack developer
