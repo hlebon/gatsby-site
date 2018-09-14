@@ -1,0 +1,42 @@
+header {
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-title {
+  color: #4a4a4a;
+  font-size: 2em;
+}
+
+.header-subtitle {
+  font-size: 1.1em;
+  color: gray;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.tech-list li {
+  padding: 2px 5px;
+  margin: 5px;
+  border: 1px solid #2196f38f;
+  font-size: 16px;
+  color: #407daf;
+  border-radius: 3px;
+  transition: right 0.4s cubic-bezier(0, 0.5, 0, 1);
+}
+
+.tech-list li:hover {
+  animation: shake-it 0.3s linear 1;
+}
