@@ -1,47 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
-import './index.css'
-import './app.css'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { Nav, Footer } from "../components";
+import "./normalize.css";
+import './index.css';
+import './app.css';
 import "./prims-funky.css";
-
-const Header = () => (
-  <div
-    style={{
-      background: 'linear-gradient(62deg,#3c4556,#282a36)',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 860,
-        padding: '1.45rem 1.0875rem',
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between'
-      }}
-    >
-      <h3 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'hsla(0,0%,100%,.8)',
-            textDecoration: 'none',
-          }}
-        >
-          Hans Blog
-        </Link>
-      </h3>
-      <div>
-        <div>
-          <Link to="/projects" style={{color: 'hsla(0,0%,100%,.8)', textDecoration: 'none'}}>Projects</Link>
-        </div>
-      </div>
-    </div>
-  </div>
-)
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -52,10 +15,9 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'c#, javascript, reactjs, MVC, asp.net, entity framework' },
       ]}
     />
-    <Header />
-    <div className="container">
+    <Nav />
       {children()}
-    </div>
+    <Footer/>
   </div>
 )
 
