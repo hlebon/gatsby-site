@@ -1,17 +1,17 @@
-import React, { Component } from 'react'
-import { graphql } from 'graphql'
-import { Header, PostList } from "../components"
-import '../layouts/index.css'
-import '../layouts/app.css'
+import React, { Component } from "react";
+import { graphql } from "graphql";
+import { Header, PostList } from "../components";
+import "../layouts/index.css";
+import "../layouts/app.css";
 
 export default function Index(query) {
-  const { edges } = query.data.allMarkdownRemark
+  const { edges } = query.data.allMarkdownRemark;
   return (
     <div>
-      <Header/>
-      <PostList data={edges}/>
+      <Header />
+      <PostList data={edges} />
     </div>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -35,4 +35,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
