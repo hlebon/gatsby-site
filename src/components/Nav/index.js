@@ -6,7 +6,6 @@ function Nav() {
     <nav
       style={{
         background: "linear-gradient(62deg,#3c4556,#282a36)",
-        marginBottom: "1.45rem"
       }}
     >
       <div
