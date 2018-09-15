@@ -9,3 +9,7 @@ html {
 *:after {
   box-sizing: border-box;
 }
+
+h1 {
+  margin: 0.3rem 0;
+}
