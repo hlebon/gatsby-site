@@ -1,3 +1,10 @@
+.content-site {
+  flex: 1 0 auto;
+}
+.footer-site {
+  flex-shrink: 0;
+}
+
 .title-color {
   color: #4c8bbd !important;
 }
