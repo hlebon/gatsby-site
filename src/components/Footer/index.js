@@ -4,22 +4,39 @@ import "../../layouts/footer.css";
 
 function Footer() {
   return (
-    <footer className="footer-page">
-      <div className="footer-page-container flex">
-        <section className="footer-page-iam">
+    <footer className="footer-site">
+      <div className="footer-site-container flex">
+        <section className="footer-site-iam">
           <h4 className="title">Hans Garcia</h4>
           <p>
-            Software web developer, amante del cafe, la pizza y fan del A.C.
-            Milan.
+            Software web developer, amante del cafe{" "}
+            <span>
+              <FontAwesomeIcon icon={"coffee"} color={"white"} />
+            </span>, pizza y fan del A.C. Milan.{" "}
+            <span>
+              <FontAwesomeIcon icon={"futbol"} color={"white"} />
+            </span>
           </p>
         </section>
-        <div>
+        <div className="social">
           <ul className="follow-me-list">
             <li>
-              Twitter: <FontAwesomeIcon icon={["fab", "twitter"]} />
+              <a href="#">
+                <FontAwesomeIcon
+                  icon={["fab", "twitter"]}
+                  size={"2x"}
+                  color={"white"}
+                />
+              </a>
             </li>
             <li>
-              Medium: <FontAwesomeIcon icon={["fab", "medium"]} />
+              <a href="#">
+                <FontAwesomeIcon
+                  icon={["fab", "medium"]}
+                  size={"2x"}
+                  color={"white"}
+                />
+              </a>
             </li>
           </ul>
         </div>
