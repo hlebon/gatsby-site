@@ -1,5 +1,5 @@
 import React from "react";
-import PostCard from "../PostCard"
+import PostCard from "../PostCard";
 
 function PostList(props) {
   const { data: posts } = props;
@@ -7,9 +7,9 @@ function PostList(props) {
     <div>
       {posts ? (
         <div>
-          {posts.map(({ node: post }, index) => {
-            const { frontmatter } = post;
-            return <PostCard key={index} post={frontmatter} />;
+          {posts.map(({ node: post }) => {
+            const { id } = post;
+            return <PostCard key={id} post={post} />;
           })}
         </div>
       ) : (
