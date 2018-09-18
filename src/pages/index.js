@@ -5,7 +5,7 @@ import "../layouts/index.css";
 import "../layouts/app.css";
 
 export default function Index(query) {
-  const { edges } = query.data.allMarkdownRemark;
+  const { edges } = query.data.allContentfulPost;
   return (
     <div>
       <Header />
@@ -15,21 +15,17 @@ export default function Index(query) {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+  query pageQuery {
+    allContentfulPost(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
-          excerpt(pruneLength: 250)
           id
-          frontmatter {
-            id
-            titleid
-            title
-            date(formatString: "MMMM DD, YYYY")
-            path
-            tags
-            excerpt
-          }
+          date
+          path
+          title
+          excerpt
+          author
+          tags
         }
       }
     }
