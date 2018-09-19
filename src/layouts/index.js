@@ -11,24 +11,36 @@ import "./prims-funky.css";
 
 library.add(fab, faCoffee, faFutbol);
 
-const TemplateWrapper = ({ children }) => (
-  <div className="site">
-    <Helmet
-      title="Hans blog"
-      meta={[
-        { name: "description", content: "Fullstack developer" },
-        {
-          name: "keywords",
-          content: "c#, javascript, reactjs, MVC, asp.net, entity framework"
+const Layout = (props) => (
+  <StaticQuery
+  query={graphql`
+    query LayoutQuery {
+      site {
+        siteMetadata {
+          title
         }
-      ]}
-    />
-    <div className="content-site">
-      <Nav />
-      {children()}
-    </div>
-    <Footer />
-  </div>
-);
+      }
+    }
+    `}
+    render={()=>{
+      return(
+        <React.Fragment>
+          <Helmet title="Hans blog" meta={[
+            { name: "description", content: "Fullstack developer" },
+            {
+              name: "keywords",
+              content: "c#, javascript, reactjs, MVC, asp.net, entity framework"
+            }
+          ]}/>
+          <div className="content-site">
+            <Nav />
+            {props.children}
+          </div>
+          <Footer />
+        </React.Fragment>
+      )
+    }}
+  />
+)
 
-export default TemplateWrapper;
+export default Layout;
