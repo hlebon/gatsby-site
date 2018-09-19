@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Link from "gatsby-link";
-import { graphql } from "graphql";
+import { Link, graphql } from "gatsby";
 import Helmet from "react-helmet";
 
 const styles = {
@@ -19,9 +18,9 @@ const styles = {
 class Template extends Component {
   render() {
     const { contentfulPost: post } = this.props.data;
-    const { pathContext } = this.props;
+    const { pageContext } = this.props;
     const { title, date, excerpt } = post;
-    const { next, prev } = pathContext;
+    const { next, prev } = pageContext;
 
     return (
       <div>

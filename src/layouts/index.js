@@ -11,36 +11,6 @@ import "./prims-funky.css";
 
 library.add(fab, faCoffee, faFutbol);
 
-const Layout = (props) => (
-  <StaticQuery
-  query={graphql`
-    query LayoutQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-    `}
-    render={()=>{
-      return(
-        <React.Fragment>
-          <Helmet title="Hans blog" meta={[
-            { name: "description", content: "Fullstack developer" },
-            {
-              name: "keywords",
-              content: "c#, javascript, reactjs, MVC, asp.net, entity framework"
-            }
-          ]}/>
-          <div className="content-site">
-            <Nav />
-            {props.children}
-          </div>
-          <Footer />
-        </React.Fragment>
-      )
-    }}
-  />
-)
+const Layout = props => <div>Hola mundo</div>;
 
 export default Layout;

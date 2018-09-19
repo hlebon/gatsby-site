@@ -1,5 +1,6 @@
+/*
 import React from 'react'
-import Link from 'gatsby-link'
+import {Link} from 'gatsby'
 
 const Tags = ({ pathContext }) => {
     const { posts, tagName } = pathContext
@@ -26,3 +27,4 @@ const Tags = ({ pathContext }) => {
 }
 
 export default Tags
+*/

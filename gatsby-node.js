@@ -1,5 +1,5 @@
 const path = require("path");
-
+/*
 const createTagPages = (createPage, posts) => {
   const tagPageTemplate = path.resolve(`src/templates/tags.js`);
   const allTagsTemplate = path.resolve(`src/templates/all-tags.js`);
@@ -41,9 +41,10 @@ const createTagPages = (createPage, posts) => {
   });
 };
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+*/
 
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
   const gql = graphql(`
     {
@@ -67,12 +68,14 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }
-
+    console.log("results", result);
     const posts = result.data.allContentfulPost.edges;
+    console.log("POST", posts);
 
-    createTagPages(createPage, posts);
+    // createTagPages(createPage, posts);
 
     posts.forEach(({ node }, index) => {
+      console.log(node);
       createPage({
         path: node.path,
         component: blogPostTemplate,

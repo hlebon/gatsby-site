@@ -1,11 +1,11 @@
 import React from "react";
-import Link from "gatsby-link"
+import { Link } from "gatsby";
 
 function Nav() {
   return (
     <nav
       style={{
-        background: "linear-gradient(62deg,#3c4556,#282a36)",
+        background: "linear-gradient(62deg,#3c4556,#282a36)"
       }}
     >
       <div
