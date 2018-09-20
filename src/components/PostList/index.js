@@ -6,33 +6,37 @@ function PostList() {
   return (
     <StaticQuery
       query={graphql`
-      query pageQuery {
-        allContentfulPost(filter: { node_locale: { eq: "en-US" } }) {
-          edges {
-            node {
-              id
-              date
-              path
-              title
-              excerpt
-              author
-              tags
+        query pageQuery {
+          allContentfulPost(filter: { node_locale: { eq: "en-US" } }) {
+            edges {
+              node {
+                id
+                date
+                path
+                title
+                excerpt
+                author
+                tags
+              }
             }
           }
         }
-      }
-    `}
+      `}
       render={query => {
         const { edges: posts } = query.allContentfulPost;
         return (
-          <div>
+          <div className="postcard-container">
             {posts && (
-              <div>
+              <ul className="postcard-list">
                 {posts.map(({ node: post }) => {
                   const { id } = post;
-                  return <PostCard key={id} post={post} />;
+                  return (
+                    <li key={id}>
+                      <PostCard post={post} />
+                    </li>
+                  );
                 })}
-              </div>
+              </ul>
             )}
           </div>
         );

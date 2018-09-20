@@ -5,7 +5,7 @@ function Nav() {
   return (
     <nav
       style={{
-        background: "linear-gradient(62deg,#3c4556,#282a36)"
+        background: "linear-gradient(62deg,#282e3a,#282a36)"
       }}
     >
       <div
@@ -22,7 +22,7 @@ function Nav() {
           <Link
             to="/"
             style={{
-              color: "hsla(0,0%,100%,.8)",
+              color: "#ffffff",
               textDecoration: "none"
             }}
           >
@@ -33,7 +33,7 @@ function Nav() {
           <div>
             <Link
               to="/projects"
-              style={{ color: "hsla(0,0%,100%,.8)", textDecoration: "none" }}
+              style={{ color: "#ffffff", textDecoration: "none" }}
             >
               Projects
             </Link>

@@ -1,27 +1,33 @@
 import React from "react";
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 
 function PostCard({ post }) {
   return (
-    <article className="article">
+    <article className="postcard">
       <header>
-        <h3 className="post-title">
-          <Link to={post.path} className={"title-color"}>
-            {post.title}
-          </Link>
+        <div>
+          <Img
+            className="postcard-img"
+            ref="https://images.unsplash.com/photo-1531816466008-90e3a4b01450?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fc178f3219178b26c80a7f597c8b852b&auto=format&fit=crop&w=750&q=80"
+            alt="save money"
+          />
+        </div>
+        <h3>
+          <Link to={post.path}>{post.title}</Link>
         </h3>
       </header>
-      <section className="post-excerpt">
+      <section>
         <p>{post.excerpt}</p>
       </section>
-      <footer className="post-meta">
+      <footer>
         <div>
           <span>{post.author} tags: </span>
         </div>
-        <div className="post-meta-tag-group">
+        <div>
           {post.tags.map((tag, index) => {
             return (
-              <p key={index} className="post-meta-link">
+              <p key={index}>
                 <Link to={`/tags/${tag}`}>{tag}</Link>
                 {post.tags[index + 1] === undefined ? "" : ","}
               </p>
