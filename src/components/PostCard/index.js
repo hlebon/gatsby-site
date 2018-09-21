@@ -3,23 +3,20 @@ import { Link } from "gatsby";
 import Img from "gatsby-image";
 
 function PostCard({ post }) {
+  console.log(post);
   return (
     <article className="postcard">
+      <img
+        className="postcard-img"
+        src="https://images.unsplash.com/photo-1531816466008-90e3a4b01450?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fc178f3219178b26c80a7f597c8b852b&auto=format&fit=crop&w=750&q=80"
+        alt="save money"
+      />
       <header>
-        <div>
-          <Img
-            className="postcard-img"
-            ref="https://images.unsplash.com/photo-1531816466008-90e3a4b01450?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fc178f3219178b26c80a7f597c8b852b&auto=format&fit=crop&w=750&q=80"
-            alt="save money"
-          />
-        </div>
-        <h3>
+        <h3 className="postcard-title">
           <Link to={post.path}>{post.title}</Link>
         </h3>
       </header>
-      <section>
-        <p>{post.excerpt}</p>
-      </section>
+      <p className="postcard-extract">{post.excerpt}</p>
       <footer>
         <div>
           <span>{post.author} tags: </span>

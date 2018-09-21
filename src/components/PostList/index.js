@@ -25,7 +25,8 @@ function PostList() {
       render={query => {
         const { edges: posts } = query.allContentfulPost;
         return (
-          <div className="postcard-container">
+          <section className="postcard-container">
+            <h1>Mis posts...</h1>
             {posts && (
               <ul className="postcard-list">
                 {posts.map(({ node: post }) => {
@@ -38,7 +39,8 @@ function PostList() {
                 })}
               </ul>
             )}
-          </div>
+            }
+          </section>
         );
       }}
     />
